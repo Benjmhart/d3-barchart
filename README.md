@@ -1,7 +1,11 @@
 Welcome to the D3 Boilerplate!
 
 
-This package includes preconfigured Webpack, Babel, ESLINT, Node-Sass, prettier, gh-pages, and jest,   
+This package includes preconfigured Webpack, Babel, ESLINT, Node-Sass, prettier, gh-pages, and jest.   
+
+please note - for SASS to be properly imported in build mode - you MUST create link tags in your src/index.html header (or other relevant html files)
+
+the build script will transpile all SASS files to ./assets/css/*.css
 
 
 USAGE:

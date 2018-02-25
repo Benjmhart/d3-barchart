@@ -9467,9 +9467,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+
 const square = __WEBPACK_IMPORTED_MODULE_0_d3__["a" /* selectAll */]("rect");
 square.style("fill", "orange");
 
+function testyMctesterson(x) {
+    return x + 3
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (testyMctesterson);
 
 /***/ }),
 /* 174 */
