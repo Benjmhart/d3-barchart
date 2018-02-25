@@ -5,6 +5,12 @@
   "main": "server.js",
   "author": "Mostafa Eweda <mo.eweda@gmail.com>",
   "repository": "git@github.com:Benjmhart/d3-boilerplate.git",
+  "jest": {
+    "verbose": true,
+    "browser": true, 
+    "roots": ["<rootDir>/src/tests"],
+    "bail": false
+  },
   "dependencies": {
     "async": "~0.2.8",
     "d3": "^4.13.0",
@@ -12,30 +18,45 @@
     "socket.io": "~0.9.14"
   },
   "scripts": {
-    "start": "webpack-dev-server --port  8080 --host 0.0.0.0 --content-base --inline --hot",
-    "build": "babel src -d build",
+    "start": "webpack-dev-server --port  8080 --host 0.0.0.0 --content-base --inline --hot  --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
     "lint": "eslint src --fix",
     "pretty": "prettier --use-tabs --write \"./src/*.js\"",
     "autofix": "npm-run-all -s pretty lint",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "test": "jest --watch"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.10",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-import": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
+    "extract-loader": "^1.0.2",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.9",
     "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^22.4.2",
+    "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.1.2",
     "prettier": "^1.10.2",
+    "regenerator-runtime": "^0.11.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.20.2",
+    "uglify": "^0.1.5",
+    "uglifyjs-webpack-plugin": "^1.2.2",
     "webpack": "^3.0.0",
-    "webpack-dev-server": "^2.11.1"
+    "webpack-dev-server": "^2.11.1",
+    "webpack-merge": "^4.1.2"
   },
   "license": "MIT"
 }
