@@ -33,5 +33,5 @@ module.exports = merge(common, {
     uglifyOptions: {
       ecma: 8,
       warnings: false,
-      }
+      }})]
 });
