@@ -7,8 +7,10 @@
   "repository": "git@github.com:Benjmhart/d3-boilerplate.git",
   "jest": {
     "verbose": true,
-    "browser": true, 
-    "roots": ["<rootDir>/src/tests"],
+    "browser": true,
+    "roots": [
+      "<rootDir>/src/tests"
+    ],
     "bail": false
   },
   "dependencies": {
@@ -35,6 +37,7 @@
     "babel-preset-env": "^1.6.1",
     "clean-webpack-plugin": "^0.1.18",
     "css-loader": "^0.28.10",
+    "d3-selection-multi": "^1.0.1",
     "eslint": "^4.18.1",
     "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-prettier": "^2.9.0",

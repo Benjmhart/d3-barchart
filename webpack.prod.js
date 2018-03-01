@@ -26,5 +26,12 @@ module.exports = merge(common, {
 						}],
 						
             }]
-        }
+        },
+        
+        plugins: [
+  new UglifyJSPlugin({
+    uglifyOptions: {
+      ecma: 8,
+      warnings: false,
+      }
 });
